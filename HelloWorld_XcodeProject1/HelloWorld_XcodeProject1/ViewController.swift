@@ -14,17 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var output: UILabel!
     @IBOutlet weak var input: UITextField!
     @IBAction func button(_ sender: UIButton) {
-        self.output.text = "Hello, " + (input.text)! + ". Welcome to Expedia!"
+        input.resignFirstResponder()
+        let stringUtils = StringUtil()
+        let outputText = stringUtils.printHelloName(input: input.text!)
+        self.output.text = outputText
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
