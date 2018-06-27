@@ -14,7 +14,7 @@ class StringUtilTests: XCTestCase
     {
         let s = "";
         let expectedString = "Hello, . Welcome to Expedia!"
-        let viewController = ReturnableViewController()
+        let viewController = StringUtil()
         let productString = viewController.printHelloName(input : s)
         XCTAssertEqual(expectedString, productString)
     }
@@ -22,7 +22,7 @@ class StringUtilTests: XCTestCase
     {
         let s = " ";
         let expectedString = "Hello,  . Welcome to Expedia!"
-        let viewController = ReturnableViewController()
+        let viewController = StringUtil()
         let productString = viewController.printHelloName(input : s)
         XCTAssertEqual(expectedString, productString)
     }
@@ -30,7 +30,7 @@ class StringUtilTests: XCTestCase
     {
         let s = "Supercalifragilisticexpialidocious_Supercalifragilisticexpialidocious";
         let expectedString = "Hello, Supercalifragilisticexpialidocious_Supercalifragilisticexpialidocious. Welcome to Expedia!"
-        let viewController = ReturnableViewController()
+        let viewController = StringUtil()
         let productString = viewController.printHelloName(input : s)
         XCTAssertEqual(expectedString, productString)
     }
